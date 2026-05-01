@@ -258,21 +258,48 @@ const licenseLine =
 
   @media (max-width: 600px) {
     .hero {
-      min-height: 75vh;
+      min-height: auto;
+      padding-top: 3.25rem;
+      padding-bottom: 0.5rem;
     }
+
     .hero__content {
-      padding-bottom: 18rem;
+      padding-top: 0.5rem;
+      /* Trust bar is shorter in 2×2; keep clearance without huge empty gap */
+      padding-bottom: 11rem;
     }
+
     .hero__form-wrap {
       max-width: 100%;
     }
-    .trust-layout {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      text-align: center;
+
+    .hero__trust-bar {
+      padding: 0.85rem 0;
     }
+
+    .trust-layout {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem 0.85rem;
+      text-align: left;
+    }
+
     .trust-item {
-      align-items: center;
+      align-items: flex-start;
+      gap: 0.12rem;
+    }
+
+    .trust-item p {
+      font-size: 0.7rem;
+      line-height: 1.25;
+    }
+
+    .trust-item__detail {
+      font-size: 0.62rem !important;
+    }
+
+    .stars {
+      font-size: 0.65rem;
     }
   }
 </style>
