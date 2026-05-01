@@ -6,7 +6,7 @@ import { r2img } from '../lib/r2';
 const rep = SITE.primaryContact;
 ---
 
-<section id="contact" class="section" style="background: var(--deep);">
+<section id="contact" class="section contact-section" style={`--contact-section-bg: url('${r2img(SITE.hero.image)}')`}>
   <div class="container contact">
 
     <div class="contact__info">
@@ -100,6 +100,22 @@ const rep = SITE.primaryContact;
 </section>
 
 <style>
+  .contact-section {
+    position: relative;
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(12, 12, 12, 0.99) 0%,
+        rgba(14, 14, 14, 0.97) 36%,
+        rgba(16, 16, 16, 0.9) 64%,
+        rgba(18, 18, 18, 0.82) 100%
+      ),
+      var(--contact-section-bg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: normal;
+  }
+
   .contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -116,6 +132,15 @@ const rep = SITE.primaryContact;
     font-size: 1.05rem;
     line-height: 1.65;
     margin-bottom: 2rem;
+  }
+
+  .contact__info {
+    position: relative;
+    padding: 1.1rem;
+    border: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    background: transparent;
   }
 
   .contact__form-wrap {
