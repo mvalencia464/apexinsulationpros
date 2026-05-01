@@ -85,7 +85,7 @@ export const SITE = {
     subheading:
       "Spray foam, blown-in, radiant barriers, and professional removal across NE, Central, and SW Florida. We seal your envelope so HVAC stops fighting 150°F+ attic air.",
     ctaText: "Call for a Free Insulation Consultation",
-    image: `${MEDIA}/apex-1.avif`,
+    image: `${MEDIA}/apex-1b.avif`,
     badges: [
       "Attic & wall specialists",
       "Residential · commercial · new construction",
@@ -317,7 +317,7 @@ export const SITE = {
   },
 
   galleryProjects: [
-    { title: "Finished Attic Insulation", category: "Spray foam", image: `${MEDIA}/apex-1.avif` },
+    { title: "Finished Attic Insulation", category: "Spray foam", image: `${MEDIA}/apex-1b.avif` },
     { title: "Residential Attic Spraying", category: "Open cell", image: `${MEDIA}/apex-2.avif` },
     { title: "Commercial Steel Insulation", category: "Large shell", image: `${MEDIA}/apex-3.avif` },
     { title: "Vaulted Ceiling Finishing", category: "Trim & detail", image: `${MEDIA}/apex-5.avif` },

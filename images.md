@@ -2,7 +2,7 @@
 
  Here is the analysis of the images for your insulation company, organized by file name:
 
-  apex-1.avif
+  apex-1b.avif
   Title: Finished Attic Insulation
   Description: A wide view of a large attic space completely sealed with white spray foam insulation, featuring professional
   equipment in the foreground.
@@ -75,7 +75,7 @@
   Description: A worker applies spray foam insulation to the interior of a commercial building's metal stud wall using a
   professional-grade spray gun.
 
-https://media.stokeleads.com/apexinsulationpros/apex-1.avif
+https://media.stokeleads.com/apexinsulationpros/apex-1b.avif
 https://media.stokeleads.com/apexinsulationpros/apex-2.avif
 https://media.stokeleads.com/apexinsulationpros/apex-3.avif
 https://media.stokeleads.com/apexinsulationpros/apex-4.avif
