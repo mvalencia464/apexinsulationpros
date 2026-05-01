@@ -138,7 +138,7 @@ export const SITE = {
       shortDesc: "Fresh loose-fill for attics and sloped ceilings with even coverage depth.",
       fullDesc:
         "When spray foam is not the right fit, we install new blown-in fiberglass or cellulose to depth targets that meet code and performance goals, with attention to chases, baffles, and hatch details.",
-      image: `${MEDIA}/apex-11.avif`,
+      image: "https://media.stokeleads.com/apexinsulationpros/mixboard-image%20(12).avif",
       icon: "BI",
       highlights: ["Depth-mapped coverage", "Works with radiant barrier plans", "Cost-effective upgrades"],
     },
@@ -198,7 +198,7 @@ export const SITE = {
       shortDesc: "Podiums, wrap buildings, and repeating unit details.",
       fullDesc:
         "Shared walls, corridor ceilings, and attic commons need repeatable quality. We align specs across stacks and keep penetrations flashed so energy models and comfort targets survive turnover.",
-      image: `${MEDIA}/apex-15.avif`,
+      image: "https://media.stokeleads.com/apexinsulationpros/mixboard-image%20(11).avif",
       icon: "MF",
       highlights: ["Repeatable unit details", "Common-area attics", "Developer-friendly reporting"],
     },
@@ -325,10 +325,10 @@ export const SITE = {
     { title: "Insulation Removal", category: "Vacuum removal", image: `${MEDIA}/apex-7.avif` },
     { title: "Sealed Crawl Space", category: "Encapsulation", image: `${MEDIA}/apex-8.avif` },
     { title: "Full House Seal", category: "New construction", image: `${MEDIA}/apex-10.avif` },
-    { title: "Spray Foam Texture", category: "Close-up", image: `${MEDIA}/apex-11.avif` },
+    { title: "Spray Foam Texture", category: "Close-up", image: "https://media.stokeleads.com/apexinsulationpros/mixboard-image%20(12).avif" },
     { title: "Equipment & Control", category: "Pro systems", image: `${MEDIA}/apex-13.avif` },
     { title: "Trimming Excess Foam", category: "Finish pass", image: `${MEDIA}/apex-14.avif` },
-    { title: "Industrial Wall Spraying", category: "Commercial", image: `${MEDIA}/apex-15.avif` },
+    { title: "Industrial Wall Spraying", category: "Commercial", image: "https://media.stokeleads.com/apexinsulationpros/mixboard-image%20(11).avif" },
   ],
 
   splitFeature: {
@@ -336,7 +336,7 @@ export const SITE = {
     title: "Free Insulation Estimates With Under-24-Hour Follow-Up",
     description:
       "Tell us about comfort issues, high bills, or a new build timeline. We respond quickly with clear next steps—no pressure, no mystery line items.",
-    image: `${MEDIA}/apex-12.avif`,
+    image: "https://media.stokeleads.com/apexinsulationpros/mixboard-image%20(13).avif",
     buttonText: "Request my free estimate",
     buttonHref: "#contact",
   },
