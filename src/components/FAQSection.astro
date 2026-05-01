@@ -1,0 +1,84 @@
+---
+import { SITE } from '../config/site';
+
+const faqs = [
+  {
+    question: "Do you offer financing for spray foam or full attic upgrades?",
+    answer:
+      "Yes. We work with financing partners for qualified homeowners so larger envelope upgrades can move forward on a predictable monthly plan.",
+  },
+  {
+    question: "How fast can you schedule blown-in removal or spray foam?",
+    answer:
+      "Most projects start with a short site visit. Removal and reinstall timing depends on attic access, scope, and drying requirements after water events.",
+  },
+  {
+    question: "Can you help with insurance documentation after storms or leaks?",
+    answer:
+      "Yes. We capture photos, moisture context, and written scopes that align with what adjusters expect for insulation tear-out and replacement.",
+  },
+  {
+    question: "What insulation systems do you install?",
+    answer:
+      "Spray foam (open and closed cell where appropriate), blown-in fiberglass and cellulose, radiant barriers, and hybrid attic strategies tailored to Florida humidity.",
+  },
+  {
+    question: "Do you provide free insulation consultations?",
+    answer:
+      `Yes. We provide a free initial consultation and written recommendations before work begins across ${SITE.serviceAreas.slice(0, 3).join(", ")}, and nearby markets.`,
+  },
+  {
+    question: "How long does a typical attic spray foam project take?",
+    answer:
+      "Many residential attic scopes finish in one to two days depending on square footage, prep, ventilation details, and whether removal is required first.",
+  },
+];
+---
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">FAQ</span>
+      <h2>Insulation questions, answered</h2>
+      <p>Financing, timelines, Florida humidity, and what to expect before we seal your envelope.</p>
+    </div>
+
+    <div class="faq-list">
+      {faqs.map((faq) => (
+        <details class="faq-item">
+          <summary>{faq.question}</summary>
+          <p>{faq.answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-list {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--panel);
+    padding: 0.95rem 1.1rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .faq-item summary {
+    cursor: pointer;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .faq-item p {
+    margin-top: 0.65rem;
+    color: var(--muted);
+    font-size: 0.93rem;
+    line-height: 1.65;
+  }
+</style>

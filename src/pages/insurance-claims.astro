@@ -1,0 +1,292 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { SITE } from '../config/site';
+
+const claimSteps = [
+  {
+    title: "Assess & document",
+    detail: "We photograph existing insulation, roof deck access points, and moisture staining so carriers see what must be removed.",
+  },
+  {
+    title: "Controlled removal",
+    detail: "Wet or contaminated batts, blown-in, or foam comes out with dust containment so drywall and finishes are protected.",
+  },
+  {
+    title: "Dry-down coordination",
+    detail: "We align with mitigation partners when dehumidification or decking repairs are required before reinsulation.",
+  },
+  {
+    title: "Reinstall scope",
+    detail: "You receive a written reinsulation scope—spray foam, blown-in, or hybrid—that matches adjuster-approved work.",
+  },
+];
+
+const whatsIncluded = [
+  "Attic and cavity inspection with photo package",
+  "Moisture and contamination notes tied to each room or zone",
+  "Removal and disposal of damaged insulation assemblies",
+  "Code-aware replacement options (foam, blown-in, radiant barrier)",
+  "Insurance-friendly written scope for adjusters",
+  "Scheduling aligned with claim approvals",
+];
+
+const faqItems = [
+  {
+    q: "Can you meet with my insurance adjuster?",
+    a: "Yes. We coordinate timing so insulation conditions are visible and scope notes match what adjusters need for approval.",
+  },
+  {
+    q: "Do I have to wait for claim approval before removing wet insulation?",
+    a: "Often no—wet insulation can keep assemblies from drying. We document first, then remove per carrier guidance and your mitigation plan.",
+  },
+  {
+    q: "What if the claim only covers part of the attic?",
+    a: "We phase work: approved sections first, then optional upgrades for comfort or energy once you decide on out-of-pocket scope.",
+  },
+];
+---
+
+<BaseLayout
+  title={`Insurance & insulation restoration | ${SITE.name}`}
+  description={`${SITE.name} documents storm and water damage, removes contaminated insulation, and reinstalls high-performance assemblies across Florida.`}
+>
+  <Header />
+
+  <main>
+    <section class="section claims-hero">
+      <div class="container">
+        <span class="section-label">Insurance recovery</span>
+        <h1>Insulation replacement after storms &amp; water damage</h1>
+        <p>
+          Hurricane-driven roof leaks and pipe bursts ruin insulation fast. We help homeowners move from soggy attics to
+          clean, dry assemblies with documentation carriers understand.
+        </p>
+        <div class="claims-hero__actions">
+          <a href="/#contact" class="btn btn--primary">Request documentation visit</a>
+          <a href={`tel:${SITE.phone.replace(/\D/g, '')}`} class="btn btn--outline">Call {SITE.phone}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Workflow</span>
+          <h2>What happens after you contact us</h2>
+        </div>
+        <div class="claims-grid">
+          {claimSteps.map((step, idx) => (
+            <article class="panel-card claim-card">
+              <p class="claim-card__num">Step {idx + 1}</p>
+              <h3>{step.title}</h3>
+              <p>{step.detail}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container claims-content">
+        <div class="panel-card included-card">
+          <h2>What our claim support includes</h2>
+          <ul>
+            {whatsIncluded.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+
+        <aside class="panel-card urgency-card">
+          <h2>Active water intrusion?</h2>
+          <p>
+            Fast removal of wet insulation and photo documentation reduces secondary damage while your adjuster reviews
+            the loss.
+          </p>
+          <a href={`tel:${SITE.phone.replace(/\D/g, '')}`} class="btn btn--primary urgency-card__btn">
+            Call our team
+          </a>
+          <a href="/#contact" class="urgency-card__alt">Request callback instead</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">FAQs</span>
+          <h2>Insurance questions</h2>
+        </div>
+        <div class="faq-list">
+          {faqItems.map((faq) => (
+            <details class="panel-card faq-item">
+              <summary>{faq.q}</summary>
+              <p>{faq.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .claims-hero {
+    padding-top: 8rem;
+  }
+
+  .claims-hero h1 {
+    color: var(--text);
+    margin-bottom: 0.75rem;
+  }
+
+  .claims-hero p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 70ch;
+  }
+
+  .claims-hero__actions {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .claims-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .claim-card {
+    padding: 1rem;
+  }
+
+  .claim-card__num {
+    color: var(--accent2);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  .claim-card h3 {
+    color: var(--text);
+    font-size: 1.3rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .claim-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .claims-content {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 1.2rem;
+    align-items: start;
+  }
+
+  .included-card,
+  .urgency-card {
+    padding: 1.1rem;
+  }
+
+  .included-card h2,
+  .urgency-card h2 {
+    color: var(--text);
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .included-card ul {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .included-card li {
+    color: var(--muted);
+    padding-left: 0.9rem;
+    position: relative;
+    font-size: 0.92rem;
+  }
+
+  .included-card li::before {
+    content: "";
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background: var(--accent2);
+    position: absolute;
+    left: 0;
+    top: 0.52rem;
+  }
+
+  .urgency-card p {
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .urgency-card__btn {
+    margin-top: 0.9rem;
+    width: 100%;
+  }
+
+  .urgency-card__alt {
+    display: block;
+    text-align: center;
+    margin-top: 0.65rem;
+    color: var(--muted);
+    font-size: 0.84rem;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .faq-item {
+    padding: 0.9rem 1rem;
+  }
+
+  .faq-item summary {
+    cursor: pointer;
+    color: var(--text);
+    font-size: 0.93rem;
+    font-weight: 700;
+  }
+
+  .faq-item p {
+    margin-top: 0.55rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  @media (max-width: 1020px) {
+    .claims-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .claims-content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .claims-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

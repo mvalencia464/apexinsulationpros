@@ -1,0 +1,59 @@
+---
+// src/pages/index.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import AboutSection from '../components/AboutSection.astro';
+import ReviewsSection from '../components/ReviewsSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import MapSection from '../components/MapSection.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import FAQSection from '../components/FAQSection.astro';
+import Footer from '../components/Footer.astro';
+import SplitFeature from '../components/SplitFeature.astro';
+import RecentWork from '../components/RecentWork.astro';
+import { SITE } from '../config/site';
+
+const split = SITE.splitFeature;
+---
+
+<BaseLayout>
+  <Header />
+  <main>
+    <Hero />
+    <ServicesGrid />
+    <section class="section">
+      <div class="container">
+        <SplitFeature
+          eyebrow={split.eyebrow}
+          title={split.title}
+          description={split.description}
+          image={split.image}
+          buttonText={split.buttonText}
+          buttonHref={split.buttonHref}
+        />
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <ProcessSteps
+          steps={[...SITE.processSteps]}
+          title="Our insulation process"
+          subtitle="Straightforward scheduling, contained worksites, and clear communication from first visit to walkthrough."
+        />
+      </div>
+    </section>
+    <AboutSection />
+    <section class="section" id="gallery">
+      <div class="container">
+        <RecentWork projects={[...SITE.galleryProjects]} title="Attic &amp; project gallery" />
+      </div>
+    </section>
+    <ReviewsSection />
+    <FAQSection />
+    <ContactSection />
+    <MapSection />
+  </main>
+  <Footer />
+</BaseLayout>
